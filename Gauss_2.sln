@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gauss_2", "Gauss_2\Gauss_2.vcxproj", "{A6117A7F-02E1-4218-AB58-FAE1B2724412}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gaus_Elimination", "Gaus_Elimination\Gaus_Elimination.vcxproj", "{4BA6DB6E-AB09-4B4D-AC67-2D8D2C290EF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6117A7F-02E1-4218-AB58-FAE1B2724412}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A6117A7F-02E1-4218-AB58-FAE1B2724412}.Debug|Win32.Build.0 = Debug|Win32
+		{A6117A7F-02E1-4218-AB58-FAE1B2724412}.Release|Win32.ActiveCfg = Release|Win32
+		{A6117A7F-02E1-4218-AB58-FAE1B2724412}.Release|Win32.Build.0 = Release|Win32
+		{4BA6DB6E-AB09-4B4D-AC67-2D8D2C290EF3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4BA6DB6E-AB09-4B4D-AC67-2D8D2C290EF3}.Debug|Win32.Build.0 = Debug|Win32
+		{4BA6DB6E-AB09-4B4D-AC67-2D8D2C290EF3}.Release|Win32.ActiveCfg = Release|Win32
+		{4BA6DB6E-AB09-4B4D-AC67-2D8D2C290EF3}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
