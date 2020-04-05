@@ -1,6 +1,10 @@
 ### Домашние задания по дисциплине "Системы технического зрения"
 ***
 
+Ссылки на оригинальный репозиторий GitLab и его форк
+https://gitlab.com/bmstu_underwater_robotics/stz
+https://gitlab.com/edirab/stz
+
 **Задание 1:** Решение СЛАУ методом Гаусса. 
     
     /Gauss_2
