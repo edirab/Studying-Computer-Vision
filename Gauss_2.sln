@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "secondary_task_1", "seconda
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Least_squares", "Least_squares\Least_squares.vcxproj", "{882E640C-BD43-4AC0-9AAD-C314EC4D1FBD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ode", "ode\ode.vcxproj", "{8773B612-8E98-4BF4-9971-0B7A35BC5E7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -47,6 +49,14 @@ Global
 		{882E640C-BD43-4AC0-9AAD-C314EC4D1FBD}.Release|Win32.Build.0 = Release|Win32
 		{882E640C-BD43-4AC0-9AAD-C314EC4D1FBD}.Release|x64.ActiveCfg = Release|x64
 		{882E640C-BD43-4AC0-9AAD-C314EC4D1FBD}.Release|x64.Build.0 = Release|x64
+		{8773B612-8E98-4BF4-9971-0B7A35BC5E7C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8773B612-8E98-4BF4-9971-0B7A35BC5E7C}.Debug|Win32.Build.0 = Debug|Win32
+		{8773B612-8E98-4BF4-9971-0B7A35BC5E7C}.Debug|x64.ActiveCfg = Debug|x64
+		{8773B612-8E98-4BF4-9971-0B7A35BC5E7C}.Debug|x64.Build.0 = Debug|x64
+		{8773B612-8E98-4BF4-9971-0B7A35BC5E7C}.Release|Win32.ActiveCfg = Release|Win32
+		{8773B612-8E98-4BF4-9971-0B7A35BC5E7C}.Release|Win32.Build.0 = Release|Win32
+		{8773B612-8E98-4BF4-9971-0B7A35BC5E7C}.Release|x64.ActiveCfg = Release|x64
+		{8773B612-8E98-4BF4-9971-0B7A35BC5E7C}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
