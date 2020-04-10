@@ -79,6 +79,7 @@ int main() {
 		max_delta = max(delta, max_delta);
 
 		cout << "u(t) =" << setw(11) << u << " y(t) =" << setw(11) << y[i] << setw(15) << delta << endl;
+		//cout << u << " " << y[i] << endl;
 	}
 	cout << "\nmax delta: " << max_delta << "\n";
 
