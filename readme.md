@@ -5,7 +5,7 @@
 https://gitlab.com/bmstu_underwater_robotics/stz
 https://gitlab.com/edirab/stz
 
-**Задание 1:** Решение СЛАУ методом Гаусса. 
+**Задание 1:** Решение СЛАУ методом Гаусса. Поиск обратной матрицы методом элементарных преобразований.
     
     /Gauss_2
 
@@ -14,6 +14,10 @@ https://gitlab.com/edirab/stz
     /Least_squares
 
 - secondary_task_1 - проверка работоспособности Eigen 
+
+**Задание 3** Дешение ОДУ. Методы Рунге-Кутта и Эйлера
+
+	/ode
 
 ***
 
