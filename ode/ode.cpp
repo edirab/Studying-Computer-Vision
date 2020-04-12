@@ -53,7 +53,7 @@ int main() {
 	setlocale(0, "");
 
 	double initVal = 1;
-	double step = 0.01;
+	double step = 0.1;
 
 	std::vector<double> time, y;
 	time.push_back(0);
