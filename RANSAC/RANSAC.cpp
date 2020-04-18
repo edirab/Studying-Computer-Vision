@@ -5,6 +5,8 @@
 
 #define MAX_ITERATIONS 500
 //#define DEBUG
+const int N = 12;
+
 
 #include <iostream>
 #include <clocale>
@@ -15,8 +17,6 @@
 #include <algorithm>
 
 using namespace std;
-
-const uint8_t N = 12;
 
 //int X[12] = { 27, 31, 43, 58, 69, 86, 102, 111, 122, 137, 18, 176 };
 //int Y[12] = { 71, 64, 52, 41, 33, 23, 17, 12, 2, 0, 87, -5 };
@@ -29,6 +29,12 @@ vector<double> x(12);
 
 double epsilon = 0.01;
 
+int best_iter_index = 0;
+double best_max_distance = -1;
+double best_k = -1;
+double best_b = -1;
+
+
 int main() {
 	//Используемая модель: Z = C* e ^(k*T)
 	//У неё 2 параметра: С и k. Их и нужно найти
@@ -40,10 +46,6 @@ int main() {
 		y[i] = log10(Z[i]);
 	}
 
-	int best_iter_index = 0;
-	double best_max_distance = -1;
-	double best_k = -1;
-	double best_b = -1;
 	//RANSAC starts here
 	for (int i = 1; i <= MAX_ITERATIONS; i++) {
 		
@@ -130,6 +132,19 @@ int main() {
 	}
 
 	cout << "\n\nBest iteration: " << best_iter_index << " with best max distance " << best_max_distance <<  "\n";
+	cout << "Best K = " << best_k << " best_b = " << best_b << "\n";
+
+	double k = best_k;
+	double C = pow(10, best_b);
+
+	cout << "Final model: Z = " << C << " * 10^(" << k << " * T) \n\n";
+	cout << setw(12) << "Z - Z[i]" << setw(10) << "Z" << setw(6) << "Z[i]" << setw(6) << "T[i]" << "\n\n";
+
+	for (int i = 0; i < N; i++) {
+
+		double y = C * pow(10, k * T[i]);
+		cout << setw(12) << y - Z[i] << setw(10) << y << setw(6) << Z[i] << setw(6) << T[i] << "\n";
+	}
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
