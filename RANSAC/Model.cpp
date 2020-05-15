@@ -6,6 +6,7 @@ Model::Model() {
 
 }
 
+
 Model::Model(int range, vector<double> x, vector<double> y) {
 
 	// для построения прямой дастаточно 2-х точек
@@ -22,6 +23,7 @@ Model::Model(int range, vector<double> x, vector<double> y) {
 	pointB.x = x[indexes.second];
 	pointB.y = y[indexes.second];
 }
+
 
 void Model::calculateParams() {
 
@@ -44,9 +46,11 @@ void Model::calculateParams() {
 	this->b = X[1];
 }
 
+
 void Model::calculateEpsilon(vector<double> x, vector<double> y) {
 
 	double max_distance = -1;
+	vector<double> distances;
 
 	// Для каждой точки из набора считаем расстояние по нормали до найденной прямой.
 	// Берём наибольшее расстояние, это и есть наша метрика
@@ -63,11 +67,14 @@ void Model::calculateEpsilon(vector<double> x, vector<double> y) {
 		//cout << "H = " << H << "\n";
 
 		max_distance = max(max_distance, H);
+		distances.push_back(max_distance);
 	}
-	currentEpsilon = max_distance;
+	sort(distances.begin(), distances.end());
+	//currentEpsilon = max_distance;
+	currentEpsilon = distances[distances.size() - 3];
 
 	#ifdef DEBUG
-		cout << "Max abs distance for this iter :" << max_distance << "\n\n";
+		cout << "Наибольшее расстояние с цчётом 2-х выбросов: " << currentEpsilon << "\n\n";
 	#endif // DEBUG
 }
 
