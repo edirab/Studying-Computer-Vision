@@ -28,6 +28,7 @@ int T[N] = { 71, 64, 52, 41, 33, 23, 17, 12, 2, 0, 87, -5 }; // x
 int main() {
 
 	setlocale(0, "");
+
 	Ransac r;
 	r.prepareData(Z, T);
 	r.iterate();

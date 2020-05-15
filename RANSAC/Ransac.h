@@ -1,9 +1,7 @@
 #pragma once
 
-#include <vector>
-#include <iostream>
-#include <Eigen/LU>
 #include <iomanip>
+
 #include "Model.h"
 
 using namespace std;
@@ -24,6 +22,8 @@ const int outliersNum = 2;
 //У неё 2 параметра: С и k. Их и нужно найти
 //После линеаризации: ln Z = k*T + ln C
 
+
+
 class Ransac {
 
 public:
@@ -31,10 +31,12 @@ public:
 	vector<double> x;
 
 	vector<Model> models;
+	pairsSet indexPairs;
 
 	Ransac();
 
 	void prepareData(int Z[N], int X[N]);
 	void iterate();
 	void findBest();
+	void printAll();
 };

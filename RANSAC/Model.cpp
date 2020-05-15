@@ -1,20 +1,26 @@
 
 #include "Model.h"
 
+// empty
+Model::Model() {
+
+}
 
 Model::Model(int range, vector<double> x, vector<double> y) {
 
 	// для построения прямой дастаточно 2-х точек
-	first_index = rand() % range;
-	second_index = 0;
+	int first_index = rand() % range;
+	int second_index = 0;
 	do {
 		second_index = rand() % range;
 	} while (first_index == second_index);
 
-	pointA.x = x[first_index];
-	pointA.y = y[first_index];
-	pointB.x = x[second_index];
-	pointB.y = y[second_index];
+	indexes = make_pair(first_index, second_index);
+
+	pointA.x = x[indexes.first];
+	pointA.y = y[indexes.first];
+	pointB.x = x[indexes.second];
+	pointB.y = y[indexes.second];
 }
 
 void Model::calculateParams() {
@@ -47,11 +53,11 @@ void Model::calculateEpsilon(vector<double> x, vector<double> y) {
 	assert(x.size() == y.size());
 
 	for (int j = 0; j < x.size(); j++) {
-		if (j == first_index || j == second_index) continue;
+		if (j == indexes.first || j == indexes.second) continue;
 
-		double A = y[first_index] - y[second_index];
-		double B = x[first_index] - x[second_index];
-		double C = y[first_index] * x[second_index] - y[second_index] * x[first_index];
+		double A = y[indexes.first] - y[indexes.second];
+		double B = x[indexes.first] - x[indexes.second];
+		double C = y[indexes.first] * x[indexes.second] - y[indexes.second] * x[indexes.first];
 
 		double H = abs((A * x[j] + B * y[j] + C) / sqrt(A * A + B * B));
 		//cout << "H = " << H << "\n";
@@ -59,5 +65,42 @@ void Model::calculateEpsilon(vector<double> x, vector<double> y) {
 		max_distance = max(max_distance, H);
 	}
 	currentEpsilon = max_distance;
-	cout << "Max abs distance for this iter :" << max_distance << "\n\n";
+
+	#ifdef DEBUG
+		cout << "Max abs distance for this iter :" << max_distance << "\n\n";
+	#endif // DEBUG
+}
+
+bool Model::setIndexes(int range, pairsSet &pairs, vector<double> x, vector<double> y) {
+	
+	//bool success = true;
+	int first_index = 0, second_index = 0;
+	int counter = 1000;
+
+	while (counter) {
+
+		first_index = rand() % range;
+
+		do {
+			second_index = rand() % range;
+		} while (first_index == second_index);
+
+		if (pairs.find(make_pair(first_index, second_index)) != pairs.end()) 
+			counter--;
+		else 
+			break;	
+	}
+
+	if (counter == 0) 
+		return false;
+
+	indexes = make_pair(first_index, second_index);
+	pairs.insert(indexes);
+
+	pointA.x = x[indexes.first];
+	pointA.y = y[indexes.first];
+	pointB.x = x[indexes.second];
+	pointB.y = y[indexes.second];
+
+	return true;
 }

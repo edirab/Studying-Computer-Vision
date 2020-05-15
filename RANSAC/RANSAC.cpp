@@ -8,7 +8,7 @@ Ransac::Ransac() {
 
 void Ransac::prepareData(int Z[N], int T[N]) {
 	for (int i = 0; i < N; i++) {
-		this->x[i] = T[i];
+		this->x[i] = T[i] - 25;
 		this->y[i] = log10(Z[i]);
 	}
 }
@@ -16,62 +16,66 @@ void Ransac::prepareData(int Z[N], int T[N]) {
 
 void Ransac::iterate() {
 	//RANSAC starts here
+	cout << "Построение моделей...\n";
+
 	for (int i = 1; i <= MAX_ITERATIONS; i++) {
 
-		cout << "Итерация " << setw(5) << i << "\n";
+		#ifdef DEBUG
+			cout << "Итерация " << setw(5) << i << "\n";
+		#endif // DEBUG
 
-		Model m(12, x,  y);
-		//m.setIndexes(12);
+		//Model m(12, x,  y);
+		Model m;
+		bool success = m.setIndexes(12, indexPairs, x, y);
+
+		if (!success) {
+			cout << "Итерация " << i << ": невозможно подобрать новую пару индексов" << "\n";
+			break;
+		}
+
 		m.calculateParams();
 		m.calculateEpsilon(x, y);
 
 		models.push_back(m);
 
-		/*
-		можно создать множество, которое бы хранило пары индексов, чтобы избежать посторений
-		*/
-#ifdef DEBUG
-		cout << "x[" << setw(2) << first_pair_index << "] = " << setw(2) << x[first_pair_index] << " y[" << setw(2) << first_pair_index << "] = " << setw(2) << y[first_pair_index] << "\n";
-		cout << "x[" << setw(2) << second_pair_index << "] = " << setw(2) << x[second_pair_index] << " y[" << setw(2) << second_pair_index << "] = " << setw(2) << y[second_pair_index] << "\n";
-#endif
-
-#ifdef DEBUG
-		cout << "k = " << setw(7) << k << " b = " << setw(7) << b << "\n";
-#endif
-
+		#ifdef DEBUG
+				printAll();
+		#endif
 	}
+}
+
+bool compareIndexes(Model a, Model b) {
+	return (a.indexes.first < b.indexes.first);
+}
+
+void Ransac::printAll() {
+
+	sort(models.begin(), models.end(), compareIndexes);
+
+	for (int i = 0; i < models.size(); i++) {
+		
+		cout << setw(3) << i + 1 << setw(8) << "(" << models[i].indexes.first << ", ";
+		cout << models[i].indexes.second << ")" << "\n";
+	}
+}
+
+bool compareEpsilon(Model a, Model b) {
+	return (a.currentEpsilon < b.currentEpsilon);
 }
 
 void Ransac::findBest() {
 
-	//if (i == 1) {
-//	best_b = b;
-//	best_k = k;
-//	best_max_distance = max_distance;
-//	best_iter_index = i;
-//}
+	sort(models.begin(), models.end(), compareEpsilon);
 
-//if (max_distance < best_max_distance) {
+	Model m = models[0];
 
-//	best_iter_index = i;
-//	best_max_distance = max_distance;
-//	best_k = k;
-//	best_b = b;
-//}
+	cout << "Лучшее совпадение: \n";
+	cout << "k = " << m.k << " b = " << m.b << " eps = " << m.currentEpsilon << "\n\n";
 
-	//cout << "\n\nBest iteration: " << best_iter_index << " with best max distance " << best_max_distance << "\n";
-//cout << "Best K = " << best_k << " best_b = " << best_b << "\n";
+	double R0 = pow(10, m.b);
 
-//double k = best_k;
-//double C = pow(10, best_b);
+	cout << "Итоговаая модель: \n";
+	cout << "Z = R0 * 10 ^ ( k * (T - T0) )\n";
 
-//cout << "Final model: Z = " << C << " * 10^(" << k << " * T) \n\n";
-//cout << setw(12) << "Z - Z[i]" << setw(10) << "Z" << setw(6) << "Z[i]" << setw(6) << "T[i]" << "\n\n";
-
-//for (int i = 0; i < N; i++) {
-
-//	double y = C * pow(10, k * T[i]);
-//	cout << setw(12) << y - Z[i] << setw(10) << y << setw(6) << Z[i] << setw(6) << T[i] << "\n";
-//}
-
+	cout << "Z = " << R0 << " * 10^(" << m.k << " * (T - T0) \n\n";
 }
