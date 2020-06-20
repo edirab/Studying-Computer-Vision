@@ -1,6 +1,7 @@
 .vs/
 .idea/
 venv/
+*.exe
 
 .ipynb*/
 Gaus_Elimination/
