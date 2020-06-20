@@ -26,13 +26,26 @@ https://gitlab.com/edirab/stz
 
 	/OCRpy
 
+**Второстепенное**
+
 - secondary_task_1 - проверка работоспособности Eigen 
 - secondary_task_2 - построение гистограмм
 - secondary_task_3 - проверка работы детекторов FAST, BRISK, SURF & SIFT. Открытие видео на чтение
 
+**Проекты 9-го семестра:**
+
+	/AnalyzeParcel
+	/dList
+	/ROVScheduler
+
+***
+*Распознавание текста с на OpenCV & Tesseract*
+![](./OCRpy/imgs/result.PNG)
+
 ***
 
-![](./OCRpy/imgs/result.PNG)
+*Поиск точечных особенностей на фото люка комингс-платформы*
+![](sample.png)
 
 ***
 
