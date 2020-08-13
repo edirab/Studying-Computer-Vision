@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dList", "dList\dList.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ROVScheduler", "ROVScheduler\ROVScheduler.vcxproj", "{B8ED658D-12FD-4F06-962A-C98DB154AF43}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Image-stiching", "Image-stiching\Image-stiching.vcxproj", "{4B232449-AE37-4979-8AAB-CA3539913002}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -129,6 +131,14 @@ Global
 		{B8ED658D-12FD-4F06-962A-C98DB154AF43}.Release|Win32.Build.0 = Release|Win32
 		{B8ED658D-12FD-4F06-962A-C98DB154AF43}.Release|x64.ActiveCfg = Release|x64
 		{B8ED658D-12FD-4F06-962A-C98DB154AF43}.Release|x64.Build.0 = Release|x64
+		{4B232449-AE37-4979-8AAB-CA3539913002}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4B232449-AE37-4979-8AAB-CA3539913002}.Debug|Win32.Build.0 = Debug|Win32
+		{4B232449-AE37-4979-8AAB-CA3539913002}.Debug|x64.ActiveCfg = Debug|x64
+		{4B232449-AE37-4979-8AAB-CA3539913002}.Debug|x64.Build.0 = Debug|x64
+		{4B232449-AE37-4979-8AAB-CA3539913002}.Release|Win32.ActiveCfg = Release|Win32
+		{4B232449-AE37-4979-8AAB-CA3539913002}.Release|Win32.Build.0 = Release|Win32
+		{4B232449-AE37-4979-8AAB-CA3539913002}.Release|x64.ActiveCfg = Release|x64
+		{4B232449-AE37-4979-8AAB-CA3539913002}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

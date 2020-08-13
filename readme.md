@@ -45,7 +45,7 @@ https://gitlab.com/edirab/stz
 ***
 
 *Поиск точечных особенностей на фото люка комингс-платформы*
-![](sample.png)
+![](./imgs/sample.png)
 
 ***
 
