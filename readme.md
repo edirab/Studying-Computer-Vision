@@ -47,9 +47,15 @@ https://gitlab.com/edirab/stz
 *Поиск точечных особенностей на фото люка комингс-платформы*
 ![](./imgs/sample.png)
 
+
+*Склейка изображений (image stitching)*
+![](./Image-stiching/boat-stitching.jpg)
+
 ***
 
-*NB 1:* Запуск Jupyter Notebook не из родительского каталога 
+*NB 1:* Запуск Jupyter Notebook не из родительского каталога:
     
     jupyter notebook --notebook-dir='E:\University\10sem\Системы технич зрения\Gauss_2\Least_squares'
 	
+или:
+- В адресной строке проводника набрать `cmd` (открытие командной строки в текущей директории) и в ней ` jupyter notebook`
