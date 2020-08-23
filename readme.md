@@ -59,3 +59,7 @@ https://gitlab.com/edirab/stz
 	
 или:
 - В адресной строке проводника набрать `cmd` (открытие командной строки в текущей директории) и в ней ` jupyter notebook`
+
+
+	git ls-files 
+	git ls-tree --full-tree -r --name-only HEAD
