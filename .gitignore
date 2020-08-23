@@ -1,11 +1,18 @@
 .vs/
 .idea/
 venv/
+
 *.exe
+*.todo
+
+*.mp4
+*.avi
+
+*.sfk
 
 .ipynb*/
+__pycache__/
 Gaus_Elimination/
-Gauss_2/Debug/
+
 Debug/
 x64/
-#*ipynb

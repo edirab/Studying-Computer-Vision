@@ -1,12 +1,15 @@
 import numpy as np
 import cv2
+from numba import jit
 
 
+#@jit(nopython=True, parallel=True)
 def singleScaleRetinex(img, sigma):
     retinex = np.log10(img) - np.log10(cv2.GaussianBlur(img, (0, 0), sigma))
     return retinex
 
 
+# @jit(nopython=True, parallel=True)
 def multiScaleRetinex(img, sigma_list):
 
     retinex = np.zeros_like(img)
@@ -23,6 +26,7 @@ def colorRestoration(img, alpha, beta):
     return color_restoration
 
 
+#@jit(nopython=True)
 def simplestColorBalance(img, low_clip, high_clip):    
 
     total = img.shape[0] * img.shape[1]
@@ -89,6 +93,7 @@ def automatedMSRCR(img, sigma_list):
     return img_retinex
 
 
+#@jit(parallel=True)
 def MSRCP(img, sigma_list, low_clip, high_clip):
 
     img = np.float64(img) + 1.0

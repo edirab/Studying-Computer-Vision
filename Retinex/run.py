@@ -3,7 +3,7 @@ import os
 
 import cv2
 import json
-
+import numpy as np
 import retinex
 
 data_path = 'data'
@@ -42,11 +42,14 @@ for img_name in img_list:
         config['sigma_list'],
         config['low_clip'],
         config['high_clip']        
-    )    
+    )
 
     shape = img.shape
     cv2.imshow('Image', img)
     cv2.imshow('retinex', img_msrcr)
     cv2.imshow('Automated retinex', img_amsrcr)
     cv2.imshow('MSRCP', img_msrcp)
+
+    img_combined = np.hstack((img_msrcr, img_amsrcr, img_msrcp))
+    cv2.imwrite("three-in-one.png", img_combined)
     cv2.waitKey()
