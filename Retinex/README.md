@@ -3,13 +3,19 @@
 ## Description
 Python implementation of multiscale retinex with color restoration.
 
+### Original Image
+
+![](./data/input_0_sel.png)
+
 | MSR with color restoration |  Auto MSR CR  | MSR Chromatic preservation
 | --- | --- | ---
 ![](imgs/three-in-one.png)
 
-## Original Image
+### Применение SSR к каналу яркости в модели HSV
+| Brightness | HSV corrected | Final Corrected |
+| --- | --- | --- | 
 
-![](./data/input_0_sel.png)
+![](./imgs/hsv/three-in-one-hsv.png)
 
 ## Requirement
 * Numpy
