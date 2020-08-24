@@ -13,6 +13,8 @@ venv/
 .ipynb*/
 __pycache__/
 Gaus_Elimination/
+maskr-cnn/
+conv-numba/
 
 Debug/
 x64/
