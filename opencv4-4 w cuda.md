@@ -1,0 +1,55 @@
+My changes:
+
+Commandline options:
+-DOPENCV_EXTRA_MODULES_PATH:PATH="C:/Program Files/opencv_contrib-4.4.0/modules/" ^
+-DPYTHON3_PACKAGES_PATH:PATH="C:/Users/corsair/Anaconda3/Lib/site-packages" ^
+-DCUDA_FAST_MATH:BOOL="1" -DENABLE_FAST_MATH:BOOL="1" ^
+-DPYTHON3_INCLUDE_DIR:PATH="C:/Users/corsair/Anaconda3/include" ^
+-DBUILD_TESTS:BOOL="0" -DCUDNN_LIBRARY:FILEPATH="C:/Program Files/cuda"  ^
+-DPYTHON3_EXECUTABLE:FILEPATH="C:/Users/corsair/Anaconda3/python.exe"  ^
+-DOPENCV_PYTHON3_VERSION:BOOL="1"  ^
+-DENABLE_PRECOMPILED_HEADERS:BOOL="0"  ^
+-DCUDNN_INCLUDE_DIR:PATH="C:/Program Files/cuda/include"  ^
+-DWITH_TBB:BOOL="1"  ^
+-DWITH_PROTOBUF:BOOL="1"  ^
+-DWITH_CUDA:BOOL="1"  ^
+-DOPENCV_ENABLE_NONFREE:BOOL="1"  ^
+-DPYTHON3_NUMPY_INCLUDE_DIRS:PATH="C:/Users/corsair/Anaconda3/Lib/site-packages/numpy/core/include"  ^
+-DEIGEN_INCLUDE_PATH:PATH="C:/Program Files/Eigen3"  ^
+-DCUDA_ARCH_BIN:STRING="6.0;6.1;"  ^
+-DOPENCV_DNN_CUDA:BOOL="1"  ^
+-DEigen3_DIR:PATH="Eigen3_DIR-NOTFOUND"  ^
+-DBUILD_opencv_python_tests:BOOL="0"  ^
+-DCUDA_SDK_ROOT_DIR:PATH="CUDA_SDK_ROOT_DIR-NOTFOUND"  ^
+-DBUILD_PERF_TESTS:BOOL="0"  ^
+-DPYTHON3_LIBRARY:FILEPATH="C:/Users/corsair/Anaconda3/libs"  ^
+-DCUDA_nvToolsExt_LIBRARY:FILEPATH="C:/Program Files/NVIDIA Corporation/NvToolsExt/lib/x64/nvToolsExt64_1.lib" -DBUILD_TBB:BOOL="0" 
+
+
+Cache file:
+OPENCV_EXTRA_MODULES_PATH:PATH=C:/Program Files/opencv_contrib-4.4.0/modules/
+PYTHON3_PACKAGES_PATH:PATH=C:/Users/corsair/Anaconda3/Lib/site-packages
+CUDA_FAST_MATH:BOOL=1
+ENABLE_FAST_MATH:BOOL=1
+PYTHON3_INCLUDE_DIR:PATH=C:/Users/corsair/Anaconda3/include
+BUILD_TESTS:BOOL=0
+CUDNN_LIBRARY:FILEPATH=C:/Program Files/cuda
+PYTHON3_EXECUTABLE:FILEPATH=C:/Users/corsair/Anaconda3/python.exe
+OPENCV_PYTHON3_VERSION:BOOL=1
+ENABLE_PRECOMPILED_HEADERS:BOOL=0
+CUDNN_INCLUDE_DIR:PATH=C:/Program Files/cuda/include
+WITH_TBB:BOOL=1
+WITH_PROTOBUF:BOOL=1
+WITH_CUDA:BOOL=1
+OPENCV_ENABLE_NONFREE:BOOL=1
+PYTHON3_NUMPY_INCLUDE_DIRS:PATH=C:/Users/corsair/Anaconda3/Lib/site-packages/numpy/core/include
+EIGEN_INCLUDE_PATH:PATH=C:/Program Files/Eigen3
+CUDA_ARCH_BIN:STRING=6.0;6.1;
+OPENCV_DNN_CUDA:BOOL=1
+Eigen3_DIR:PATH=Eigen3_DIR-NOTFOUND
+BUILD_opencv_python_tests:BOOL=0
+CUDA_SDK_ROOT_DIR:PATH=CUDA_SDK_ROOT_DIR-NOTFOUND
+BUILD_PERF_TESTS:BOOL=0
+PYTHON3_LIBRARY:FILEPATH=C:/Users/corsair/Anaconda3/libs
+CUDA_nvToolsExt_LIBRARY:FILEPATH=C:/Program Files/NVIDIA Corporation/NvToolsExt/lib/x64/nvToolsExt64_1.lib
+BUILD_TBB:BOOL=0

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29318.209
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1169
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gauss_2", "Gauss_2\Gauss_2.vcxproj", "{A6117A7F-02E1-4218-AB58-FAE1B2724412}"
 EndProject
@@ -30,6 +30,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Image-stiching", "Image-stiching\Image-stiching.vcxproj", "{4B232449-AE37-4979-8AAB-CA3539913002}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Image-stitching-detailed", "Image-stitching-detailed\Image-stitching-detailed.vcxproj", "{A36AC5C7-76E2-459C-8939-26B788C0E05A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cuda-test", "cuda-test\cuda-test.vcxproj", "{EA6CBF55-DFF8-43A6-BD5F-FEA52591ADFA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cuda-treshold", "cuda-treshold\cuda-treshold.vcxproj", "{E9506F30-3945-4F8C-85A7-5274320EA13E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -149,6 +153,22 @@ Global
 		{A36AC5C7-76E2-459C-8939-26B788C0E05A}.Release|Win32.Build.0 = Release|Win32
 		{A36AC5C7-76E2-459C-8939-26B788C0E05A}.Release|x64.ActiveCfg = Release|x64
 		{A36AC5C7-76E2-459C-8939-26B788C0E05A}.Release|x64.Build.0 = Release|x64
+		{EA6CBF55-DFF8-43A6-BD5F-FEA52591ADFA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EA6CBF55-DFF8-43A6-BD5F-FEA52591ADFA}.Debug|Win32.Build.0 = Debug|Win32
+		{EA6CBF55-DFF8-43A6-BD5F-FEA52591ADFA}.Debug|x64.ActiveCfg = Debug|x64
+		{EA6CBF55-DFF8-43A6-BD5F-FEA52591ADFA}.Debug|x64.Build.0 = Debug|x64
+		{EA6CBF55-DFF8-43A6-BD5F-FEA52591ADFA}.Release|Win32.ActiveCfg = Release|Win32
+		{EA6CBF55-DFF8-43A6-BD5F-FEA52591ADFA}.Release|Win32.Build.0 = Release|Win32
+		{EA6CBF55-DFF8-43A6-BD5F-FEA52591ADFA}.Release|x64.ActiveCfg = Release|x64
+		{EA6CBF55-DFF8-43A6-BD5F-FEA52591ADFA}.Release|x64.Build.0 = Release|x64
+		{E9506F30-3945-4F8C-85A7-5274320EA13E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E9506F30-3945-4F8C-85A7-5274320EA13E}.Debug|Win32.Build.0 = Debug|Win32
+		{E9506F30-3945-4F8C-85A7-5274320EA13E}.Debug|x64.ActiveCfg = Debug|x64
+		{E9506F30-3945-4F8C-85A7-5274320EA13E}.Debug|x64.Build.0 = Debug|x64
+		{E9506F30-3945-4F8C-85A7-5274320EA13E}.Release|Win32.ActiveCfg = Release|Win32
+		{E9506F30-3945-4F8C-85A7-5274320EA13E}.Release|Win32.Build.0 = Release|Win32
+		{E9506F30-3945-4F8C-85A7-5274320EA13E}.Release|x64.ActiveCfg = Release|x64
+		{E9506F30-3945-4F8C-85A7-5274320EA13E}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
