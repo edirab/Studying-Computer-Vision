@@ -50,7 +50,7 @@ int main()
 	//VideoCapture cap("../../Retinex/video/retinex-sample3.mp4");
 
 	VideoCapture cap("E:/University/10sem/Системы технич зрения/studying-computer-vision/Retinex/video/retinex-sample3.mp4");
-	VideoWriter video("retinex-fourier.avi", VideoWriter::fourcc('M', 'J', 'P', 'G'), 30, Size(1280, 720));
+	VideoWriter video("retinex-fourier.avi", VideoWriter::fourcc('D', 'I', 'V', 'X'), 30, Size(1280, 720));
 
 	if (!cap.isOpened())
 		return -1;

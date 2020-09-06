@@ -4,6 +4,8 @@ venv/
 
 *.exe
 *.todo
+*.vcxproj.filters
+*.vcxproj.user
 
 *.mp4
 *.avi

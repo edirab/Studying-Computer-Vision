@@ -37,6 +37,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cuda-treshold", "cuda-tresh
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fourier_filtering", "fourier_filtering\fourier_filtering.vcxproj", "{D7800B74-C0B1-40FF-8DA5-D57328AEDD27}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "video-writer", "video-writer\video-writer.vcxproj", "{1F168E33-53CC-41E0-9279-C3498CAB9572}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -179,6 +181,14 @@ Global
 		{D7800B74-C0B1-40FF-8DA5-D57328AEDD27}.Release|Win32.Build.0 = Release|Win32
 		{D7800B74-C0B1-40FF-8DA5-D57328AEDD27}.Release|x64.ActiveCfg = Release|x64
 		{D7800B74-C0B1-40FF-8DA5-D57328AEDD27}.Release|x64.Build.0 = Release|x64
+		{1F168E33-53CC-41E0-9279-C3498CAB9572}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1F168E33-53CC-41E0-9279-C3498CAB9572}.Debug|Win32.Build.0 = Debug|Win32
+		{1F168E33-53CC-41E0-9279-C3498CAB9572}.Debug|x64.ActiveCfg = Debug|x64
+		{1F168E33-53CC-41E0-9279-C3498CAB9572}.Debug|x64.Build.0 = Debug|x64
+		{1F168E33-53CC-41E0-9279-C3498CAB9572}.Release|Win32.ActiveCfg = Release|Win32
+		{1F168E33-53CC-41E0-9279-C3498CAB9572}.Release|Win32.Build.0 = Release|Win32
+		{1F168E33-53CC-41E0-9279-C3498CAB9572}.Release|x64.ActiveCfg = Release|x64
+		{1F168E33-53CC-41E0-9279-C3498CAB9572}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

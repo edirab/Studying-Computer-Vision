@@ -7,20 +7,20 @@ https://gitlab.com/edirab/stz
 
 **Задание 1:** Решение СЛАУ методом Гаусса. Поиск обратной матрицы методом элементарных преобразований.
     
-    /Gauss_2
+    10 sem/Gauss_2
 
 **Задание 2:** Калибровка термодатчика. Апроксимация экспериментальных данных с помощью МНК.
 
-    /Least_squares
-	/RANSAC - использована робастная оценка выбросов данных
+    10 sem/Least_squares
+	10 sem/RANSAC - использована робастная оценка выбросов данных
 
 **Задание 3:** Решение ОДУ. Методы Рунге-Кутта и Эйлера
 
-	/ode
+	10 sem/ode
 
 **Задание 4:** Поиск точечных особенностей на изображении. Детекторы BRISK, SIFT & SURF
 
-	/Feature_detecrors
+	10 sem/Feature_detecrors
 	
 **Задание 5:** Распознавание текста с помощью tesseract
 
@@ -28,19 +28,19 @@ https://gitlab.com/edirab/stz
 
 **Второстепенное**
 
-- secondary_task_1 - проверка работоспособности Eigen 
-- secondary_task_2 - построение гистограмм
-- secondary_task_3 - проверка работы детекторов FAST, BRISK, SURF & SIFT. Открытие видео на чтение
+    10 sem/secondary_task_1 - проверка работоспособности Eigen 
+    10 sem/secondary_task_2 - построение гистограмм
+    10 sem/secondary_task_3 - проверка работы детекторов FAST, BRISK, SURF & SIFT. Открытие видео на чтение
 
 **Проекты 9-го семестра:**
 
-	/AnalyzeParcel
-	/dList
-	/ROVScheduler
+	9 sem/AnalyzeParcel
+	9 sem/dList
+	9 sem/ROVScheduler
 
 ***
 *Распознавание текста с на OpenCV & Tesseract*
-![](./OCRpy/imgs/result.PNG)
+![](./10 sem/OCRpy/imgs/result.PNG)
 
 ***
 
