@@ -2,7 +2,6 @@
 //
 #pragma once
 
-//#include <opencv2/opencv.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/imgproc.hpp>
@@ -19,7 +18,6 @@ void CalcIFFT(Mat complex, Mat &output);
 void fftshift(const Mat& inputImg, Mat& outputImg);
 Mat MakeHPF(Size size, int D, int n, float high_h_v_TB, float low_h_v_TB);
 
-int frame_no = 1;
 
 string type2str(int type) {
 	string r;
@@ -46,26 +44,42 @@ string type2str(int type) {
 
 int main()
 {
-
 	//VideoCapture cap("../../Retinex/video/retinex-sample3.mp4");
 
 	VideoCapture cap("E:/University/10sem/Системы технич зрения/studying-computer-vision/Retinex/video/retinex-sample3.mp4");
-	VideoWriter video("retinex-fourier.avi", VideoWriter::fourcc('D', 'I', 'V', 'X'), 30, Size(1280, 720));
+	//VideoCapture cap("retinex-sample3.mp4");
+	//VideoCapture cap("testo.avi");
 
-	if (!cap.isOpened())
+	//if (!cap.isOpened())
+	//	cout << "!!! Input video could not be opened" << endl;
+	//	return -1;
+
+	VideoWriter video("retinex-fourier.avi", 
+						VideoWriter::fourcc('D', 'I', 'V', 'X'), 
+						cap.get(CAP_PROP_FPS),
+						Size(1280, 720));
+
+	if (!video.isOpened())
+	{
+		cout << "!!! Output video could not be opened" << endl;
 		return -1;
+	}
 
 	bool stop = false;
-
 	Mat img_in;
+	int frame_no = 1;
 
-	while (!stop) {
+	while (true) {
 
 		cap.read(img_in); // imread(, IMREAD_COLOR);
 
 		if (img_in.empty()) //check whether the image is loaded or not
 		{
 			cout << "ERROR : New frame cannot be loaded..!!" << endl;
+			break;
+		}
+
+		if (frame_no == 30) {
 			break;
 		}
 		//imshow("Blue", img_in[0]);
@@ -116,7 +130,12 @@ int main()
 
 		//merge()
 		merge(hsv_cropped, img_merged);
-		//imshow("Final", img_merged);
+		imshow("Final", img_merged);
+
+		cvtColor(img_merged, img_merged, COLOR_HSV2BGR);
+		
+		imshow("Final", img_merged);
+		waitKey(0);
 
 		video.write(img_merged);
 		// Ждём нажатия на кнопку
@@ -129,7 +148,7 @@ int main()
 	video.release();
 	
 	// Closes all the windows	
-	destroyAllWindows();
+	//destroyAllWindows();
 	return 0;
 }
 

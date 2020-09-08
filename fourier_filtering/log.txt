@@ -1,0 +1,32 @@
+Frame # 3209
+Frame # 3210
+Frame # 3211
+Frame # 3212
+Frame # 3213
+Frame # 3214
+Frame # 3215
+Frame # 3216
+Frame # 3217
+Frame # 3218
+Frame # 3219
+Frame # 3220
+Frame # 3221
+Frame # 3222
+Frame # 3223
+Frame # 3224
+Frame # 3225
+Frame # 3226
+Frame # 3227
+Frame # 3228
+Frame # 3229
+Frame # 3230
+Frame # 3231
+Frame # 3232
+Frame # 3233
+Frame # 3234
+Frame # 3235
+Frame # 3236
+ERROR : New frame cannot be loaded..!!
+[ INFO:0] global C:\OpenCV\opencv-4.1.1-cuda\modules\videoio\src\backend_plugin.cpp (178) 
+cv::impl::DynamicLib::libraryRelease unload 
+E:\University\10sem\??????? ?????? ??????\studying-computer-vision\x64\Debug\opencv_videoio_ffmpeg411_64.dll
