@@ -30,3 +30,4 @@ Place test data into data folder and execute run.py.
 * [Multiscale Retinex] (http://www.ipol.im/pub/art/2014/107/)
 
 https://www.youtube.com/watch?v=XtH9DfctaJk
+https://stackoverflow.com/questions/10415028/how-can-i-recover-the-return-value-of-a-function-passed-to-multiprocessing-proce
