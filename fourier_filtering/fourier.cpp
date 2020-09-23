@@ -57,7 +57,8 @@ int main()
 	VideoWriter video("retinex-fourier.avi", 
 						VideoWriter::fourcc('D', 'I', 'V', 'X'), 
 						cap.get(CAP_PROP_FPS),
-						Size(1280, 720));
+						//Size(1280, 720));
+						Size(1270, 710));
 
 	if (!video.isOpened())
 	{
@@ -79,26 +80,35 @@ int main()
 			break;
 		}
 
-		if (frame_no == 30) {
-			break;
-		}
-		//imshow("Blue", img_in[0]);
-		//imshow("Original", img_in);
-		//waitKey(0);
+		//if (frame_no == 30) {
+		//	break;
+		//}
 
-		Mat img_hsv;
-		cvtColor(img_in, img_hsv, COLOR_BGR2HSV);
-		//imshow("HSV", img_hsv);
-		//waitKey(0);
-
-		//cvtColor(img_hsv, img_hsv, COLOR_BGR2GRAY);
+		Mat img_hsv, img_gray;
 		Mat hsv_array[3];
-		split(img_hsv, hsv_array);
+		//Rect roi(0, 0, hsv_array[2].cols - 10, hsv_array[2].rows - 10);
+		Rect roi(0, 0, img_in.cols - 10, img_in.rows - 10);
 
 		int high_h_v_TB = 120;
 		int low_h_v_TB = 80;
 		int D = 10;// radius of band pass filter parameter
 		int order = 2;
+
+		cvtColor(img_in, img_hsv, COLOR_BGR2HSV);
+		split(img_hsv, hsv_array);
+
+		bool debug = true;
+		debug = false;
+
+		if (debug) {
+			//imshow("Blue", img_in[0]);
+			cvtColor(img_hsv, img_gray, COLOR_BGR2GRAY);
+			imshow("Original", img_in);
+			imshow("HSV", img_hsv);
+			imshow("gray", img_gray);
+
+			waitKey(0);
+		}
 
 		Mat imgMagn, imgPhase, imgOut, imgComplex;
 
@@ -111,14 +121,17 @@ int main()
 		fftshift(imgComplex, imgComplex);
 		CalcIFFT(imgComplex, imgOut);
 
-		Rect roi(0, 0, hsv_array[2].cols - 10, hsv_array[2].rows - 10);
+
 		imgOut = imgOut(roi);
-
 		normalize(imgOut, imgOut, 0, 1, NORM_MINMAX);
-		//imshow("Transformed Val channel", imgOut);
-		//waitKey(0);
+		imgOut.convertTo(imgOut, CV_8UC1, 255, 0);
 
-		imgOut.convertTo(imgOut, CV_8UC1);
+		if (debug) {
+			imshow("Transformed Val channel", imgOut);
+			cout << type2str(imgOut.type()) << "\n";
+			waitKey(0);
+		}
+		//imgOut.convertTo(imgOut, CV_8UC1);
 		//cout << type2str(imgOut.type()) << "\n\n";
 
 		vector<Mat> hsv_cropped;
@@ -128,14 +141,20 @@ int main()
 		hsv_cropped.push_back(hsv_array[1](roi));
 		hsv_cropped.push_back(imgOut);
 
+		if (debug) {
+			cout << type2str(hsv_cropped[0].type()) << "\n";
+			cout << type2str(hsv_cropped[1].type()) << "\n";
+			cout << type2str(hsv_cropped[2].type()) << "\n";
+		}
+
 		//merge()
 		merge(hsv_cropped, img_merged);
-		imshow("Final", img_merged);
-
 		cvtColor(img_merged, img_merged, COLOR_HSV2BGR);
 		
-		imshow("Final", img_merged);
-		waitKey(0);
+		if (debug) {
+			imshow("Final", img_merged);
+			waitKey(0);
+		}
 
 		video.write(img_merged);
 		// Ждём нажатия на кнопку

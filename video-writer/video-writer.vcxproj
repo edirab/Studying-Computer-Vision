@@ -23,7 +23,7 @@
     <ProjectGuid>{1f168e33-53cc-41e0-9279-c3498cab9572}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>video_writer</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
