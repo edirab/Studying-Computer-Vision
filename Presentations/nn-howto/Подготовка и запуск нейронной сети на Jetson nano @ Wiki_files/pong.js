@@ -1,0 +1,1 @@
+$(window).on("message",function(a){var e=a.originalEvent,n=e.data,s=e.source;try{n=JSON.parse(n)}catch(a){}"ping"!==n&&"ping"!==n.message||s.postMessage("pong","*")});

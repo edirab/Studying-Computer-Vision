@@ -1,0 +1,1 @@
+dnn_yolo.exe --config=../../darknet/cfg/yolov3.cfg --model=../../darknet/yolov3.weights --classes=object_detection_classes_pascal_voc.txt --width=416 --height=416 --scale=0.00392 --rgb
