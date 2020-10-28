@@ -63,3 +63,4 @@ https://gitlab.com/edirab/stz
 
 	git ls-files 
 	git ls-tree --full-tree -r --name-only HEAD
+	
